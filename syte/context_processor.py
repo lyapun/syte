@@ -35,4 +35,6 @@ def site_pages(request):
     context['WOOPRA_TRACKING_IDLE_TIMEOUT'] = settings.WOOPRA_TRACKING_IDLE_TIMEOUT
     context['WOOPRA_TRACKING_INCLUDE_QUERY'] = settings.WOOPRA_TRACKING_INCLUDE_QUERY
 
+    context['TRIPSTER_INTEGRATION_ENABLED'] = settings.TRIPSTER_INTEGRATION_ENABLED
+
     return context

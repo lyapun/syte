@@ -34,6 +34,7 @@
       <li><a href="http://instagram.com/p/QeiqKCw8kS/" id="instagram-link">Instagram</a></li>
       <!--<li><a href="http://www.lastfm.ru/user/lyapun89" id="lastfm-link">Last.fm</a></li>-->
       <li><a href="https://ru.foursquare.com/tlyapun" id="foursquare-link">Foursquare</a></li>
+      <li><a href="http://tripster.ru/static/widget/tripster.swf?username=Lyapun" id="tripster-link">Tripster</a></li>
       {% comment %}
       <li><a href="http://tent.henklein.com" id="tent-link">Tent.io</a></li>
       <li><a href="http://soundcloud.com/guram-kajaia" id="soundcloud-link">Soundcloud</a></li>
@@ -65,8 +66,8 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
     bitbucket_integration_enabled = {% if BITBUCKET_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     foursquare_integration_enabled = {% if FOURSQUARE_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
     disqus_integration_enabled = {% if DISQUS_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
-    tent_integration_enabled = {% if TENT_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
-
+    tent_integration_enabled = {% if TENT_INTEGRATION_ENABLED %}true{% else %}false{% endif %},
+    tripster_integration_enabled = {% if TRIPSTER_INTEGRATION_ENABLED %}true{% else %}false{% endif %};
 
 {% if DISQUS_INTEGRATION_ENABLED %}var disqus_shortname = '{{ DISQUS_SHORTNAME }}';{% endif %}
 </script>
@@ -102,6 +103,7 @@ var twitter_integration_enabled = {% if TWITTER_INTEGRATION_ENABLED %}true{% els
 {% if SOUNDCLOUD_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/soundcloud.js"></script>{% endif %}
 {% if FOURSQUARE_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/foursquare.js"></script>{% endif %}
 {% if TENT_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/tent.js"></script>{% endif %}
+{% if TRIPSTER_INTEGRATION_ENABLED %}<script src="{{ MEDIA_URL }}js/components/tripster.js"></script>{% endif %}
 {% else %}
 <script src="{{ MEDIA_URL }}js/min/scripts-{{ COMPRESS_REVISION_NUMBER }}.min.js"></script>
 {% endif %}

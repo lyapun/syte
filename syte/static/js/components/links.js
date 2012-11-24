@@ -9,7 +9,8 @@ var allComponents = [
   'soundcloud',
   'bitbucket',
   'foursquare',
-  'tent'
+  'tent',
+  'tripster'
 ];
 
 function setupLinks() {
@@ -64,6 +65,10 @@ function setupLinks() {
       else if(this.id == 'tent-link' && tent_integration_enabled) {
          adjustSelection('tent');
          setupTent(this);
+      }
+      else if(this.id == 'tripster-link' && tripster_integration_enabled) {
+         adjustSelection('tripster');
+         setupTripster(url, this);
       }
       else {
          window.location = this.href;
